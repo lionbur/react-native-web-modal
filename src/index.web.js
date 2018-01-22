@@ -24,7 +24,7 @@ export default class Modal extends Component {
     const { transparent, visible, animationType, children } = this.props;
 
     const baseStyle = {
-      backgroundColor: transparent ? "transparent" : "#fff",
+      backgroundColor: transparent ? "transparent" : "rgba(0,0,0,.75)",
       display: "flex",
       flexDirection: "column",
       position: "fixed",
@@ -32,7 +32,9 @@ export default class Modal extends Component {
       right: 0,
       bottom: 0,
       left: 0,
-      zIndex: 9999
+      zIndex: 9999,
+      alignItems: 'center',
+      justifyContent: 'center',
     };
 
     const displayStyles = {
